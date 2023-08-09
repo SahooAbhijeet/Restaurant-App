@@ -1,0 +1,14 @@
+{
+  "name": "restaurant-app",
+  "version": "1.0.0",
+  "description": "This is a frontend project",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Abhijeet Sahoo",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
