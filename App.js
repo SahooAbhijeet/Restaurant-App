@@ -6,7 +6,8 @@ const heading = React.createElement(
     "h1", 
     {
       id: "title",
-    },
+      key: "h1",
+    }, 
     "Heading 1"
 );
 
@@ -14,6 +15,7 @@ const heading2 = React.createElement(
     "h2", 
     {
       id: "title",
+      key: "h2",
     },
     "Heading 2"
 );
@@ -29,7 +31,6 @@ const container = React.createElement(
 console.log(heading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 // passing the react element inside the root 
 
 root.render(container);
