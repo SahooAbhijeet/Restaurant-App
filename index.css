@@ -1,4 +1,20 @@
-#container {
-    background-color: #4707e9;
-    font-size: medium;
+.Header {
+    display: flex;
+    justify-content:space-between;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.Nav-Items >ul {
+    list-style-type: none;
+    display:flex;
+    
+}
+
+.Nav-Items >ul >li {
+    padding: 15px;
+    font-size: x-large;
+}
+.Logo {
+    width: 100px;
 }
