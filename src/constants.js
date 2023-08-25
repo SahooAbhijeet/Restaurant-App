@@ -1,37 +1,33 @@
-export const IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+export const IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/";
 
 
 
 
 export const restaurantList = [
-    {
+  {
+    "card": {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
         "info": {
-          "id": "440123",
-          "name": "Great Indian Khichdi by EatFit",
-          "cloudinaryImageId": "d4f87a7cf9cc0f519cf245f02d609755",
-          "locality": "Cunnigham road",
-          "areaName": "Vasanth Nagar",
-          "costForTwo": "₹200 for two",
+          "id": "43836",
+          "name": "McDonald's",
+          "cloudinaryImageId": "ee5f8e06b300efc07c9fe3f4df40dfc4",
+          "locality": "MG Road",
+          "areaName": "Ashok Nagar",
+          "costForTwo": "₹400 for two",
           "cuisines": [
-            "Home Food",
-            "Indian",
-            "North Indian",
-            "Healthy Food",
-            "Snacks",
-            "Desserts",
-            "Rajasthani",
-            "South Indian",
-            "Maharashtrian",
-            "Sweets"
+            "Burgers",
+            "Beverages",
+            "Cafe",
+            "Desserts"
           ],
-          "avgRating": 4.3,
-          "veg": true,
+          "avgRating": 4.2,
           "feeDetails": {
-            "restaurantId": "440123",
+            "restaurantId": "43836",
             "fees": [
               {
                 "name": "BASE_DISTANCE",
-                "fee": 4100
+                "fee": 2800
               },
               {
                 "name": "BASE_TIME"
@@ -40,47 +36,32 @@ export const restaurantList = [
                 "name": "ANCILLARY_SURGE_FEE"
               }
             ],
-            "totalFee": 4100
+            "totalFee": 2800
           },
-          "parentId": "319582",
-          "avgRatingString": "4.3",
-          "totalRatingsString": "1K+",
+          "parentId": "630",
+          "avgRatingString": "4.2",
+          "totalRatingsString": "10K+",
           "sla": {
-            "deliveryTime": 21,
-            "lastMileTravel": 3,
+            "deliveryTime": 23,
+            "lastMileTravel": 1.4,
             "serviceability": "SERVICEABLE",
-            "slaString": "21 mins",
-            "lastMileTravelString": "3.0 km",
+            "slaString": "23 mins",
+            "lastMileTravelString": "1.4 km",
             "iconType": "ICON_TYPE_EMPTY"
           },
           "availability": {
-            "nextCloseTime": "2023-08-16 23:59:00",
+            "nextCloseTime": "2023-08-25 02:45:00",
             "opened": true
           },
           "badges": {
-            "textExtendedBadges": [
-              {
-                "iconId": "guiltfree/GF_Logo_android_3x",
-                "shortDescription": "options available",
-                "fontColor": "#7E808C"
-              }
-            ]
+            
           },
           "isOpen": true,
           "type": "F",
           "badgesV2": {
             "entityBadges": {
               "textExtendedBadges": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "iconId": "guiltfree/GF_Logo_android_3x",
-                      "description": "",
-                      "shortDescription": "options available",
-                      "fontColor": "#7E808C"
-                    }
-                  }
-                ]
+                
               },
               "textBased": {
                 
@@ -91,14 +72,9 @@ export const restaurantList = [
             }
           },
           "aggregatedDiscountInfoV3": {
-            "header": "60% OFF",
-            "subHeader": "UPTO ₹120",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
+            "header": "10% OFF",
+            "subHeader": "ABOVE ₹999",
+            "discountTag": "FLAT DEAL"
           },
           "orderabilityCommunication": {
             "title": {
@@ -138,35 +114,41 @@ export const restaurantList = [
           
         },
         "cta": {
-          "link": "swiggy://menu?restaurant_id=440123",
+          "link": "swiggy://menu?restaurant_id=43836",
           "text": "RESTAURANT_MENU",
           "type": "DEEPLINK"
-        }
-      },
-      {
+        },
+        "widgetId": "collectionV5RestaurantListWidget"
+      }
+    }
+  },
+  {
+    "card": {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
         "info": {
-          "id": "622202",
-          "name": "MOJO Pizza - 2X Toppings",
-          "cloudinaryImageId": "59b64f9bb67234987652437f21d379c2",
-          "locality": "Langford Road",
-          "areaName": "Shantinagar",
-          "costForTwo": "₹250 for two",
+          "id": "53503",
+          "name": "Brik Oven",
+          "cloudinaryImageId": "49352a71022a5b08a8361306ba253892",
+          "locality": "Church Street",
+          "areaName": "Church Street",
+          "costForTwo": "₹700 for two",
           "cuisines": [
-            "Pizzas",
             "Italian",
-            "Fast Food",
-            "Desserts"
+            "Pizzas",
+            "Desserts",
+            "Beverages"
           ],
-          "avgRating": 4.1,
+          "avgRating": 4.2,
           "feeDetails": {
-            "restaurantId": "622202",
+            "restaurantId": "53503",
             "fees": [
-              {
-                "name": "BASE_TIME"
-              },
               {
                 "name": "BASE_DISTANCE",
                 "fee": 3300
+              },
+              {
+                "name": "BASE_TIME"
               },
               {
                 "name": "ANCILLARY_SURGE_FEE"
@@ -174,19 +156,150 @@ export const restaurantList = [
             ],
             "totalFee": 3300
           },
-          "parentId": "11329",
-          "avgRatingString": "4.1",
-          "totalRatingsString": "50+",
+          "parentId": "7389",
+          "avgRatingString": "4.2",
+          "totalRatingsString": "10K+",
+          "promoted": true,
+          "adTrackingId": "cid=7734117~p=4~eid=0000018a-279f-d3fb-1ca3-2de20059046e~srvts=1692881900539~92870",
           "sla": {
-            "deliveryTime": 20,
-            "lastMileTravel": 2.1,
+            "deliveryTime": 32,
+            "lastMileTravel": 1.6,
             "serviceability": "SERVICEABLE",
-            "slaString": "15-25 mins",
-            "lastMileTravelString": "2.1 km",
+            "slaString": "32 mins",
+            "lastMileTravelString": "1.6 km",
             "iconType": "ICON_TYPE_EMPTY"
           },
           "availability": {
-            "nextCloseTime": "2023-08-17 00:00:00",
+            "nextCloseTime": "2023-08-24 23:30:00",
+            "opened": true
+          },
+          "badges": {
+            "imageBadges": [
+              {
+                "imageId": "newg.png",
+                "description": "Gourmet"
+              }
+            ]
+          },
+          "isOpen": true,
+          "type": "F",
+          "badgesV2": {
+            "entityBadges": {
+              "textBased": {
+                
+              },
+              "imageBased": {
+                "badgeObject": [
+                  {
+                    "attributes": {
+                      "imageId": "newg.png",
+                      "description": "Gourmet"
+                    }
+                  }
+                ]
+              },
+              "textExtendedBadges": {
+                
+              }
+            }
+          },
+          "aggregatedDiscountInfoV3": {
+            "header": "50% OFF",
+            "subHeader": "UPTO ₹100"
+          },
+          "orderabilityCommunication": {
+            "title": {
+              
+            },
+            "subTitle": {
+              
+            },
+            "message": {
+              
+            },
+            "customIcon": {
+              
+            }
+          },
+          "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+              "lottie": {
+                
+              },
+              "video": {
+                
+              }
+            }
+          },
+          "reviewsSummary": {
+            
+          },
+          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          "restaurantOfferPresentationInfo": {
+            
+          }
+        },
+        "analytics": {
+          
+        },
+        "cta": {
+          "link": "swiggy://menu?restaurant_id=53503",
+          "text": "RESTAURANT_MENU",
+          "type": "DEEPLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget"
+      }
+    }
+  },
+  {
+    "card": {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        "info": {
+          "id": "570511",
+          "name": "Bakingo",
+          "cloudinaryImageId": "qwbqggsxzw86vgk60c9c",
+          "locality": "MV Jayanthi Road",
+          "areaName": "Vasanth Nagar",
+          "costForTwo": "₹299 for two",
+          "cuisines": [
+            "Bakery",
+            "Desserts",
+            "Beverages",
+            "Snacks"
+          ],
+          "avgRating": 4.4,
+          "feeDetails": {
+            "restaurantId": "570511",
+            "fees": [
+              {
+                "name": "BASE_DISTANCE",
+                "fee": 3900
+              },
+              {
+                "name": "BASE_TIME"
+              },
+              {
+                "name": "ANCILLARY_SURGE_FEE"
+              }
+            ],
+            "totalFee": 3900
+          },
+          "parentId": "3818",
+          "avgRatingString": "4.4",
+          "totalRatingsString": "1K+",
+          "sla": {
+            "deliveryTime": 26,
+            "lastMileTravel": 3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "26 mins",
+            "lastMileTravelString": "3.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+          },
+          "availability": {
+            "nextCloseTime": "2023-08-25 01:00:00",
             "opened": true
           },
           "badges": {
@@ -209,14 +322,8 @@ export const restaurantList = [
           },
           "aggregatedDiscountInfoV3": {
             "header": "₹150 OFF",
-            "subHeader": "ABOVE ₹499",
-            "discountTag": "FLAT DEAL",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
+            "subHeader": "ABOVE ₹349",
+            "discountTag": "FLAT DEAL"
           },
           "orderabilityCommunication": {
             "title": {
@@ -256,58 +363,64 @@ export const restaurantList = [
           
         },
         "cta": {
-          "link": "swiggy://menu?restaurant_id=622202",
+          "link": "swiggy://menu?restaurant_id=570511",
           "text": "RESTAURANT_MENU",
           "type": "DEEPLINK"
-        }
-      },
-      {
+        },
+        "widgetId": "collectionV5RestaurantListWidget"
+      }
+    }
+  },
+  {
+    "card": {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
         "info": {
-          "id": "139114",
-          "name": "Main Lassi Shop",
-          "cloudinaryImageId": "cxil95w4fbwvqmtjtmbn",
-          "locality": "Shivajinagar,NO 55 COCKBURN ROAD",
-          "areaName": "Central Bangalore",
-          "costForTwo": "₹250 for two",
+          "id": "105167",
+          "name": "Bhartiya Jalpan",
+          "cloudinaryImageId": "lpikismf7ulkpknsbw2h",
+          "locality": "Tasker Town",
+          "areaName": "Commercial Street",
+          "costForTwo": "₹270 for two",
           "cuisines": [
-            "Beverages",
-            "Juices",
-            "Ice Cream",
-            "Pizzas",
-            "Desserts"
+            "North Indian",
+            "Sweets",
+            "Desserts",
+            "Chaat"
           ],
-          "avgRating": 3.8,
+          "avgRating": 4.2,
+          "veg": true,
           "feeDetails": {
-            "restaurantId": "139114",
+            "restaurantId": "105167",
             "fees": [
               {
-                "name": "BASE_TIME"
+                "name": "BASE_DISTANCE",
+                "fee": 3400
               },
               {
-                "name": "BASE_DISTANCE",
-                "fee": 4100
+                "name": "BASE_TIME"
               },
               {
                 "name": "ANCILLARY_SURGE_FEE"
               }
             ],
-            "totalFee": 4100
+            "totalFee": 3400
           },
-          "parentId": "20112",
-          "avgRatingString": "3.8",
-          "totalRatingsString": "1K+",
+          "parentId": "7518",
+          "avgRatingString": "4.2",
+          "totalRatingsString": "10K+",
           "promoted": true,
-          "adTrackingId": "cid=7920802~p=6~eid=00000189-ff7c-33fa-4198-c90900b1064f~srvts=1692208477178~45995",
+          "adTrackingId": "cid=7686392~p=5~eid=0000018a-279f-d3fb-1ca3-2de300590559~srvts=1692881900539~92870",
           "sla": {
-            "deliveryTime": 21,
+            "deliveryTime": 33,
             "lastMileTravel": 3,
             "serviceability": "SERVICEABLE",
-            "slaString": "21 mins",
+            "slaString": "33 mins",
             "lastMileTravelString": "3.0 km",
             "iconType": "ICON_TYPE_EMPTY"
           },
           "availability": {
-            "nextCloseTime": "2023-08-17 03:00:00",
+            "nextCloseTime": "2023-08-24 21:00:00",
             "opened": true
           },
           "badges": {
@@ -329,14 +442,8 @@ export const restaurantList = [
             }
           },
           "aggregatedDiscountInfoV3": {
-            "header": "50% OFF",
-            "subHeader": "UPTO ₹100",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
+            "header": "30% OFF",
+            "subHeader": "UPTO ₹75"
           },
           "orderabilityCommunication": {
             "title": {
@@ -376,12 +483,18 @@ export const restaurantList = [
           
         },
         "cta": {
-          "link": "swiggy://menu?restaurant_id=139114",
+          "link": "swiggy://menu?restaurant_id=105167",
           "text": "RESTAURANT_MENU",
           "type": "DEEPLINK"
-        }
-      },
-      {
+        },
+        "widgetId": "collectionV5RestaurantListWidget"
+      }
+    }
+  },
+  {
+    "card": {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
         "info": {
           "id": "5938",
           "name": "Burger King",
@@ -399,7 +512,7 @@ export const restaurantList = [
             "fees": [
               {
                 "name": "BASE_DISTANCE",
-                "fee": 3300
+                "fee": 2800
               },
               {
                 "name": "BASE_TIME"
@@ -408,21 +521,21 @@ export const restaurantList = [
                 "name": "ANCILLARY_SURGE_FEE"
               }
             ],
-            "totalFee": 3300
+            "totalFee": 2800
           },
           "parentId": "166",
           "avgRatingString": "4.1",
           "totalRatingsString": "10K+",
           "sla": {
-            "deliveryTime": 22,
-            "lastMileTravel": 2.8,
+            "deliveryTime": 29,
+            "lastMileTravel": 2.7,
             "serviceability": "SERVICEABLE",
-            "slaString": "22 mins",
-            "lastMileTravelString": "2.8 km",
+            "slaString": "29 mins",
+            "lastMileTravelString": "2.7 km",
             "iconType": "ICON_TYPE_EMPTY"
           },
           "availability": {
-            "nextCloseTime": "2023-08-17 02:00:00",
+            "nextCloseTime": "2023-08-25 02:00:00",
             "opened": true
           },
           "badges": {
@@ -432,26 +545,20 @@ export const restaurantList = [
           "type": "F",
           "badgesV2": {
             "entityBadges": {
+              "textExtendedBadges": {
+                
+              },
               "textBased": {
                 
               },
               "imageBased": {
                 
-              },
-              "textExtendedBadges": {
-                
               }
             }
           },
           "aggregatedDiscountInfoV3": {
-            "header": "60% OFF",
-            "subHeader": "UPTO ₹120",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
+            "header": "EVERY ITEM",
+            "subHeader": "@ ₹129"
           },
           "orderabilityCommunication": {
             "title": {
@@ -494,383 +601,9 @@ export const restaurantList = [
           "link": "swiggy://menu?restaurant_id=5938",
           "text": "RESTAURANT_MENU",
           "type": "DEEPLINK"
-        }
-      },
-      {
-        "info": {
-          "id": "281469",
-          "name": "Lavonne",
-          "cloudinaryImageId": "emlehbuwgsmryxhwzhvq",
-          "locality": "St. Marks Road",
-          "areaName": "St. Marks Road",
-          "costForTwo": "₹750 for two",
-          "cuisines": [
-            "Bakery",
-            "Desserts"
-          ],
-          "avgRating": 4.6,
-          "feeDetails": {
-            "restaurantId": "281469",
-            "fees": [
-              {
-                "name": "BASE_DISTANCE",
-                "fee": 3600
-              },
-              {
-                "name": "BASE_TIME"
-              },
-              {
-                "name": "ANCILLARY_SURGE_FEE"
-              }
-            ],
-            "totalFee": 3600
-          },
-          "parentId": "10530",
-          "avgRatingString": "4.6",
-          "totalRatingsString": "1K+",
-          "sla": {
-            "deliveryTime": 15,
-            "lastMileTravel": 0.6,
-            "serviceability": "SERVICEABLE",
-            "slaString": "15 mins",
-            "lastMileTravelString": "0.6 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2023-08-17 22:40:00",
-            "opened": true
-          },
-          "badges": {
-            "imageBadges": [
-              {
-                "imageId": "newg.png",
-                "description": "Gourmet"
-              }
-            ],
-            "textExtendedBadges": [
-              {
-                "iconId": "guiltfree/GF_Logo_android_3x",
-                "shortDescription": "options available",
-                "fontColor": "#7E808C"
-              }
-            ]
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textExtendedBadges": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "description": "",
-                      "shortDescription": "options available",
-                      "fontColor": "#7E808C",
-                      "iconId": "guiltfree/GF_Logo_android_3x"
-                    }
-                  }
-                ]
-              },
-              "textBased": {
-                
-              },
-              "imageBased": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "imageId": "newg.png",
-                      "description": "Gourmet"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          }
         },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=281469",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        }
-      },
-      {
-        "info": {
-          "id": "727378",
-          "name": "Dairy Day Ice Creams & Frozen Desserts",
-          "cloudinaryImageId": "8a5db0657c66a78dfd208e3d7ac08c3d",
-          "locality": "Wilson Garden",
-          "areaName": "Basavanagudi",
-          "costForTwo": "₹150 for two",
-          "cuisines": [
-            "Ice Cream",
-            "Desserts"
-          ],
-          "avgRating": 4.8,
-          "feeDetails": {
-            "restaurantId": "727378",
-            "fees": [
-              {
-                "name": "BASE_DISTANCE",
-                "fee": 4100
-              },
-              {
-                "name": "BASE_TIME"
-              },
-              {
-                "name": "ANCILLARY_SURGE_FEE"
-              }
-            ],
-            "totalFee": 4100
-          },
-          "parentId": "430279",
-          "avgRatingString": "4.8",
-          "totalRatingsString": "10+",
-          "promoted": true,
-          "adTrackingId": "cid=7913813~p=3~eid=0000018a-045d-53ef-0266-8de000e6030c~srvts=1692290339823~45995",
-          "sla": {
-            "deliveryTime": 21,
-            "lastMileTravel": 3,
-            "serviceability": "SERVICEABLE",
-            "slaString": "21 mins",
-            "lastMileTravelString": "3.0 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2023-08-17 22:30:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "imageBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              },
-              "textBased": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "30% OFF",
-            "subHeader": "UPTO ₹75",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "isNewlyOnboarded": true,
-          "restaurantOfferPresentationInfo": {
-            
-          }
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=727378",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        }
-      },
-      {
-        "info": {
-          "id": "432976",
-          "name": "KFC",
-          "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426",
-          "locality": "Double Road",
-          "areaName": "Shanti Nagar",
-          "costForTwo": "₹400 for two",
-          "cuisines": [
-            "Burgers",
-            "Biryani",
-            "American",
-            "Snacks",
-            "Fast Food"
-          ],
-          "avgRating": 4.1,
-          "feeDetails": {
-            "restaurantId": "432976",
-            "fees": [
-              {
-                "name": "BASE_DISTANCE",
-                "fee": 3600
-              },
-              {
-                "name": "BASE_TIME"
-              },
-              {
-                "name": "ANCILLARY_SURGE_FEE"
-              }
-            ],
-            "totalFee": 3600
-          },
-          "parentId": "547",
-          "avgRatingString": "4.1",
-          "totalRatingsString": "1K+",
-          "sla": {
-            "deliveryTime": 24,
-            "lastMileTravel": 2.5,
-            "serviceability": "SERVICEABLE",
-            "slaString": "24 mins",
-            "lastMileTravelString": "2.5 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2023-08-17 23:00:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "20% OFF",
-            "subHeader": "UPTO ₹50",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          }
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=432976",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        }
+        "widgetId": "collectionV5RestaurantListWidget"
       }
-    ];
+    }
+  }
+]
