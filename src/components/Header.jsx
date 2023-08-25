@@ -1,9 +1,10 @@
+import Logo from "../assets/img/gradient-spicy-logo-template-design_23-2149641024.avif";
 const Title = () => (
     <a href="/">
     <img
     className="Logo"
     alt="Logo" 
-    src="https://th.bing.com/th/id/OIP.sEQoAUtBqtmJdj2ycEh3XAHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" 
+    src={Logo} 
     />
     </a>
 );

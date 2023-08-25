@@ -4,7 +4,7 @@ const RestaurantCard = ({
     name,
     areaName,
     cloudinaryImageId,
-    lastMileTravelString,
+    lastMileTravel,
   }) => {
       return (
           <div className="Card">
@@ -17,9 +17,9 @@ const RestaurantCard = ({
              />
                 <h2>{name}</h2>
               <h2>{areaName}</h2>
-              <h4>{lastMileTravelString}</h4> 
+              <h4>{lastMileTravel}</h4>
           </div>
-      );  
+      );
   };
 
   export default RestaurantCard;

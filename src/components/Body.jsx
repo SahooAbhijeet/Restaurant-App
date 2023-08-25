@@ -43,8 +43,8 @@ const Body = () => {
 
       if(!allRestaurants) return null;
 
-      if(filteredRestaurants?.length === 0)
-      return <h1> No Match !!!</h1>;
+      // if(filteredRestaurants?.length === 0)
+      // return <h1> No Match !!!</h1>;
       
       return allRestaurants?.length===0 ? (
       <Shimmer /> 
@@ -76,7 +76,7 @@ const Body = () => {
              
           return (  
           <RestaurantCard {...restaurant.card.card.info} key={restaurant.card.card.info} /> 
-          );console.log(key);
+          );
         }
         )
         }
