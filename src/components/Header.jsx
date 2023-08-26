@@ -29,7 +29,12 @@ const Header = () => {
                     </Link>
                     </li>
 
-                    <li>Contact</li>
+                    <li>
+                        <Link to="/Contact">
+                        <li>Contact</li>
+                        </Link>
+                    </li>
+
                     <li>Cart</li>
                 
                 </ul>
