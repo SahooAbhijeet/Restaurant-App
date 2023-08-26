@@ -31,6 +31,7 @@ const Body = () => {
           const json = await data.json();
           setAllRestaurants(json?.data?.cards);
           setFilteredRestaurants(json?.data?.cards);
+          
 
         } catch (error) {
           console.log("Something went wrong");
@@ -72,7 +73,6 @@ const Body = () => {
 
       <div className="restaurant-list">
         {filteredRestaurants.map((restaurant) => {
-             
           return (  
           <RestaurantCard {...restaurant.card.card.info} key={restaurant.card.card.info} /> 
           );
