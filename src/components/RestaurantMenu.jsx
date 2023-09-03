@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IMG_CDN_URL } from "../config";
-import  Shimmer from "../components/Shimmer";
+import  Shimmer from "./Shimmer";
 
 
 const RestaurantMenu = () => {
+    // how to read the dynamic URL params
     const params = useParams();
     const {resId} = params;
     console.log(params);
@@ -20,15 +21,17 @@ const RestaurantMenu = () => {
         const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=20.2960587&lng=85.8245398&restaurantId=" + resId);
         const json = await data.json();
         console.log("menu1",json);
+
         console.log("json 1",json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards)
         setRestaurant(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
         
     }
     
-    if(!restaurant) {
-        return <Shimmer />;
-    }
-    return (
+    return !restaurant ? (
+        <Shimmer />
+    ) : (
+  
+    
         <div className="menu">
        <div> 
         <div>
