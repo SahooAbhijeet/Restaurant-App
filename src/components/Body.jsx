@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
+import { FETCH_RESTAURANT_URL } from "../config";
 
 
 
@@ -21,22 +22,30 @@ const Body = () => {
       
       const getRestaurants = async () => {
         try {
-          const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.2960587&lng=85.8245398&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+          const data = await fetch(FETCH_RESTAURANT_URL);
           const json = await data.json();
           console.log("json-1-menu",json);
-          // console.log("json",json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+         
           console.log("json",json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
           setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           
           console.log("data", data.data.cards);
-
+  
         } catch (error) {
           console.log("Something went wrongin fetching the data");
         }
       }
-      console.log("render");
+
+
+      const offline = useOnline();
+
+      <h1>🔴 NO Internet Connection..... 
+        Please check your internet connection and try it later
+      </h1>;
+      
+
  
 
 
