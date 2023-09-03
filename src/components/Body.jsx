@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import { FETCH_RESTAURANT_URL } from "../config";
+import useOnline from "../utils/useOnline";
 
 
 
@@ -39,8 +40,9 @@ const Body = () => {
       }
 
 
-      const offline = useOnline();
+      const isOnline = useOnline();
 
+      if(!isOnline)
       <h1>🔴 NO Internet Connection..... 
         Please check your internet connection and try it later
       </h1>;
@@ -78,10 +80,7 @@ const Body = () => {
 
       <div className="restaurant-list"> 
         {filteredRestaurants.map((restaurant) => {
-          // console.log("Result",restaurant?.info)
          
-
-          // console.log("res card",restaurant)
           return (  
           <Link to={"/restaurant" + restaurant?.info?.id }
           key={restaurant?.info?.id}
