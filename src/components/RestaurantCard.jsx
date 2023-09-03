@@ -1,10 +1,10 @@
-import {IMG_CDN_URL} from "../constants";
+import {IMG_CDN_URL} from "../config";
 
 const RestaurantCard = ({
     name,
     areaName,
     cloudinaryImageId,
-    lastMileTravel,
+    avgRating,
   }) => {
       return (
           <div className="Card">
@@ -17,7 +17,7 @@ const RestaurantCard = ({
              />
                 <h2>{name}</h2>
               <h2>{areaName}</h2>
-              <h4>{lastMileTravel}</h4>
+              <h4>{avgRating}⭐</h4>
           </div>
       );
   };

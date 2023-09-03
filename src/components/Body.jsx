@@ -1,16 +1,17 @@
 import { render } from "react-dom";
-import { restaurantList } from "../constants";
+import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard"
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 function filterData(searchText, restaurants) {
 
   const filterData = restaurants.filter((restaurant) => 
-  restaurant?.card?.card?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
+  restaurant?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
   );
-  
+
   return filterData;
 }
 
@@ -21,31 +22,31 @@ const Body = () => {
       
 
       useEffect(() => {
-        
         getRestaurants();
       }, []);
       
       const getRestaurants = async () => {
         try {
-          const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&collection=92870&isNewCollectionFlow=true&tags=layout_ux4&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
+          const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.2960587&lng=85.8245398&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
           const json = await data.json();
-          setAllRestaurants(json?.data?.cards);
-          setFilteredRestaurants(json?.data?.cards);
+          console.log("json-1-menu",json);
+          // console.log("json",json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          console.log("json",json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+          setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           
+          console.log("data", data.data.cards);
 
         } catch (error) {
-          console.log("Something went wrong");
+          console.log("Something went wrongin fetching the data");
         }
-       
-      };
+      }
       console.log("render");
+ 
 
 
       if(!allRestaurants) return null;
-
-      // if(filteredRestaurants?.length === 0)
-      // return <h1> No Match !!!</h1>;
-      
       return allRestaurants?.length===0 ? (
       <Shimmer /> 
       ) : (
@@ -71,18 +72,28 @@ const Body = () => {
       </button>
     </div>
 
-      <div className="restaurant-list">
+
+      <div className="restaurant-list"> 
         {filteredRestaurants.map((restaurant) => {
+          // console.log("Result",restaurant?.info)
+         
+
+          // console.log("res card",restaurant)
           return (  
-          <RestaurantCard {...restaurant.card.card.info} key={restaurant.card.card.info} /> 
+          <Link to={"/restaurant" + restaurant?.info?.id }
+          key={restaurant?.info?.id}
+          >
+            <RestaurantCard {...restaurant?.info}  />
+             </Link>
           );
         }
         )
         }
-        
         </div>
         </>
     );
 };
+
+
 export default Body;
  
