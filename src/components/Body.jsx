@@ -25,7 +25,7 @@ const Body = () => {
         try {
           const data = await fetch(FETCH_RESTAURANT_URL);
           const json = await data.json();
-          console.log("json-1-menu",json);
+          console.log("json",json);
          
           console.log("json",json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
@@ -35,7 +35,7 @@ const Body = () => {
           console.log("data", data.data.cards);
   
         } catch (error) {
-          console.log("Something went wrongin fetching the data");
+          console.log("Something went wrong in fetching the data");
         }
       }
 
@@ -43,7 +43,7 @@ const Body = () => {
       const isOnline = useOnline();
 
       if(!isOnline)
-      <h1>🔴 NO Internet Connection..... 
+      <h1> 🔴 NO Internet Connection..... 
         Please check your internet connection and try it later
       </h1>;
       
