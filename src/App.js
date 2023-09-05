@@ -8,7 +8,7 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
-
+import Cart from "./components/Cart";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
@@ -49,6 +49,10 @@ const About = lazy(() => import("./components/About"));
             {
                 path: "/Contact",
                 element: <Contact />
+            },
+            {
+              path: "/Cart",
+              element: <Cart />
             },
             {
                 path: "/restaurant/:resId",

@@ -56,7 +56,7 @@ const Body = () => {
       <Shimmer /> 
       ) : (
       <>
-      <div className="search-container">
+      <div className="search-container p-4 bg-amber-200 my-2 shadow-lg">
         <input
         type="text"
         className="search-input"
@@ -67,7 +67,7 @@ const Body = () => {
         }}
         />
         <button 
-        className="search-btn" 
+        className="p-2 m-4 bg-blue-700 text-white rounded-lg" 
         onClick={() => {
         const data = filterData(searchText, allRestaurants);
           setFilteredRestaurants(data);
@@ -78,11 +78,11 @@ const Body = () => {
     </div>
 
 
-      <div className="restaurant-list"> 
+      <div className="flex flex-wrap"> 
         {filteredRestaurants.map((restaurant) => {
          
           return (  
-          <Link to={"/restaurant" + restaurant?.info?.id }
+          <Link to={"/restaurant/" + restaurant?.info?.id }
           key={restaurant?.info?.id}
           >
             <RestaurantCard {...restaurant?.info}  />

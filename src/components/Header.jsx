@@ -1,47 +1,51 @@
-import Logo from "../assets/img/gradient-spicy-logo-template-design_23-2149641024.avif";
+import Logo from "../assets/vecteezy_vintage-grilled-barbecue-logo-retro-bbq-vector-fire-grill_6735689.jpg";
 import { Link } from "react-router-dom";
 
 const Title = () => (
     <a href="/">
-    <img
-    className="Logo"
-    alt="Logo" 
-    src={Logo} 
+    <img className ="h-28 p-3" alt="Logo" 
+    src={Logo}
     />
     </a>
 );
 
 const Header = () => {
     return (
-        <div className="Header">
+        <div className="flex justify-between bg-amber-200 shadow-xl">
             <Title />
-            <div className="Nav-Items">
-                <ul>
-                    <li>
+            <div className="nav-items ">
+                <ul className="flex py-10">
+                    <li className="px-4 font-semibold text-xl">
                     <Link to="/">
                     <li>Home</li>
                     </Link>
                     </li>
                     
-                    <li>
+                    <li className="px-4 font-semibold text-xl ">
                     <Link to="/About">
                     <li>About</li>
                     </Link>
                     </li>
 
-                    <li>
+                    <li className="px-4 font-semibold text-xl">
                         <Link to="/Contact">
                         <li>Contact</li>
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="px-4 font-semibold text-xl">
                         <Link to="/Instamart">
                         <li>Instamart</li>
                         </Link>
                     </li>
 
-                    <li>Cart</li>
+                    <li className="px-4 font-semibold text-xl">
+                        <Link to="/Cart">
+                            <li>Cart</li>
+                        </Link>
+                    </li>
+
+                    
                 
                 </ul>
             </div>

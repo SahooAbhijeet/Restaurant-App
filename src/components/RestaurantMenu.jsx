@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { IMG_CDN_URL } from "../config";
 import  Shimmer from "./Shimmer";
 import useRestaurant from "../utils/useRestaurant";
-
+import body from "./Body";
 
 const RestaurantMenu = () => {
     // how to read the dynamic URL params
@@ -23,7 +22,7 @@ const RestaurantMenu = () => {
     
         <div className="menu">
        <div> 
-        <div>
+         <div>
             <h1>Restaurant id: {resId}</h1>
             <img src={IMG_CDN_URL + restaurant?.card?.info?.cloudinaryImageId} />
             <h2>{restaurant?.card?.info?.name}</h2>
@@ -31,7 +30,7 @@ const RestaurantMenu = () => {
             <h2>{restaurant?.costForTwoMessage}</h2>
             <h2>{restaurant?.avgRating}</h2>
             <h2>{restaurant?.sla?.lastMileTravelString}</h2>
-        </div>
+        </div> 
         <div>
             <ul>
             
