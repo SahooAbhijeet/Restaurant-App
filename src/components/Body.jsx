@@ -29,8 +29,11 @@ const Body = () => {
          
           console.log("json",json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
-          setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-          setFilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          // setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          // setFilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+          setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           
           console.log("data", data.data.cards);
   
@@ -59,8 +62,8 @@ const Body = () => {
       <div className="search-container p-4 bg-amber-200 my-2 shadow-lg">
         <input
         type="text"
-        className="search-input"
-        placeholder="Search"
+        className="bg- hover:bg-blue-800 active:bg-white focus:outline-none focus:ring focus:ring-violet-300 p-2 m-2zx "
+        placeholder="Search Restaurant's And Food"
         value={searchText}
         onChange={(e) => {
           setSearchText(e.target.value);
@@ -78,7 +81,7 @@ const Body = () => {
     </div>
 
 
-      <div className="flex flex-wrap"> 
+      <div className="flex flex-wrap bg-purple-800"> 
         {filteredRestaurants.map((restaurant) => {
          
           return (  

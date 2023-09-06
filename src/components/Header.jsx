@@ -1,9 +1,9 @@
-import Logo from "../assets/vecteezy_vintage-grilled-barbecue-logo-retro-bbq-vector-fire-grill_6735689.jpg";
+import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 
 const Title = () => (
     <a href="/">
-    <img className ="h-28 p-3" alt="Logo" 
+    <img className ="h-40 p-3 bg-amber-200" alt="Logo"
     src={Logo}
     />
     </a>
