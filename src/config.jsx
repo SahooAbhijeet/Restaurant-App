@@ -7,7 +7,9 @@ export const FETCH_MENU_URL =
   export const FETCH_RESTAURANT_URL = 
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.2960587&lng=85.8245398&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-  
+  export const SHIMMER_RES_CARDS_COUNT = 8;
+export const SHIMMER_MENU_ITEMS_COUNT = 4;
+
 
 export const restaurantList = [
 {

@@ -63,7 +63,7 @@ const Body = () => {
         <input
         type="text"
         className="bg- hover:bg-blue-800 active:bg-white focus:outline-none focus:ring focus:ring-violet-300 p-2 m-2zx "
-        placeholder="Search Restaurant's And Food"
+        placeholder="Restaurant's And Food"
         value={searchText}
         onChange={(e) => {
           setSearchText(e.target.value);
@@ -81,21 +81,22 @@ const Body = () => {
     </div>
 
 
-      <div className="flex flex-wrap bg-purple-800"> 
+      <div className="flex flex-wrap gap-5 justify-center bg-amber-800"> 
         {filteredRestaurants.map((restaurant) => {
          
           return (  
-          <Link to={"/restaurant/" + restaurant?.info?.id }
+          <Link 
+          className="basis-[250px] p-2.5 mb-2.5 mob:basis-[150px]"
+          to={"/restaurant/" + restaurant?.info?.id }
           key={restaurant?.info?.id}
-          >
+>
             <RestaurantCard {...restaurant?.info}  />
              </Link>
           );
-        }
-        )
-        }
+        })}
+
         </div>
-        </>
+      </>
     );
 };
 

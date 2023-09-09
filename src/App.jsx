@@ -1,4 +1,4 @@
-import React, {lazy, Suspense } from "react";
+import React, {lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -14,6 +14,11 @@ const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
 
  const AppLayout = () => {
+    const [user, setUser] = useState({
+        name: "restro",
+        email: "support@restro.com",
+    });
+    
     return (
         <>
         <Header />
@@ -31,7 +36,10 @@ const About = lazy(() => import("./components/About"));
         children: [
             {
                 path: "/",
-                element: <Body />
+                element: <Body user={{
+                    name: "restro",
+                    email: "support@restro.com",
+                }} />
             },
             {
                 path: "/About",
