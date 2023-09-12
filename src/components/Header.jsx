@@ -1,5 +1,7 @@
+import { useState, useContext } from "react";
 import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 const Title = () => (
     <a href="/">
@@ -10,6 +12,9 @@ const Title = () => (
 );
 
 const Header = () => {
+    const [loggedin, setLoggedIn] = useState(false);
+
+    const isOnline = useOnline();
     return (
         <div className="flex justify-between bg-amber-200 shadow-xl">
             <Title />
