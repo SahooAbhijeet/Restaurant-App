@@ -9,6 +9,9 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import Cart from "./components/Cart";
+import UserContext from "./utils/UserContext";
+import {Provider} from "react-redux";
+import store from "./utils/store";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
@@ -20,11 +23,18 @@ const About = lazy(() => import("./components/About"));
     });
     
     return (
-        <>
+        <Provider store={store}>
+        <UserContext.Provider
+        value={{
+            user: user,
+            setUser: setUser,
+          }}
+        >
         <Header />
         <Outlet />
         <Footer />
-        </>
+        </UserContext.Provider>
+        </Provider>
     );
  };
 
