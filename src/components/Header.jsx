@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-
+import { useSelector } from "react-redux";
 const Title = () => (
     <a href="/">
     <img className ="h-40 p-3 bg-amber-200" alt="Logo"
@@ -12,9 +12,13 @@ const Title = () => (
 );
 
 const Header = () => {
-    const [loggedin, setLoggedIn] = useState(false);
+    const [isloggedin, setIsLoggedIn] = useState(false);
 
     const isOnline = useOnline();
+
+    const cartItems = useSelector(store => store.cart.items);
+    console.log(cartItems);
+
     return (
         <div className="flex justify-between bg-amber-200 shadow-xl">
             <Title />
@@ -46,7 +50,7 @@ const Header = () => {
 
                     <li className="px-4 font-semibold text-xl">
                         <Link to="/Cart">
-                            <li>Cart</li>
+                            <li>Cart- {cartItems.length}</li>
                         </Link>
                     </li>
 

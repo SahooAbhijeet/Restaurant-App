@@ -85,6 +85,10 @@ const About = lazy(() => import("./components/About"));
                 </Suspense>
                 ),
             },
+            {
+                path: "/cart",
+                element: <Cart />
+            },
         ],
     },
 ]);
