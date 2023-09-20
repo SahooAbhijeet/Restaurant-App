@@ -3,7 +3,7 @@ import { IMG_CDN_URL } from "../config";
 import  Shimmer from "./Shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import body from "./Body";
-import {addItems} from "../utils/cartSlice";
+import {addItems} from "../Redux/Slices/cartSlice";
 import { useDispatch } from "react-redux";
 
 
