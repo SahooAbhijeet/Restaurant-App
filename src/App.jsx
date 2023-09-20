@@ -1,12 +1,12 @@
 import React, {lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
+import HomeLayout from "./components/HomeLayout";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Error from "./components/Error";
-import Contact from "./components/Contact";
+import Contact from "./Pages/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import Cart from "./components/Cart";
@@ -14,8 +14,9 @@ import UserContext from "./utils/UserContext";
 import {Provider} from "react-redux";
 import store from "./Redux/store";
 
-const Instamart = lazy(() => import("./components/Instamart"));
-const About = lazy(() => import("./components/About"));
+
+const Instamart = lazy(() => import("./Pages/Instamart"));
+const About = lazy(() => import("./Pages/About"));
 
  const AppLayout = () => {
     const [user, setUser] = useState({
@@ -31,7 +32,7 @@ const About = lazy(() => import("./components/About"));
             setUser: setUser,
           }}
         >
-        <Header />
+        {/* <HomeLayout /> */}
         <Outlet />
         <Footer />
         <Toaster />

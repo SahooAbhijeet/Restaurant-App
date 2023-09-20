@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import { FETCH_RESTAURANT_URL } from "../config";
 import useOnline from "../utils/useOnline";
-
+import { FiMenu } from "react-icons/fi";
 
 const Body = () => {
       const [allRestaurants, setAllRestaurants] = useState([]);
@@ -41,12 +41,14 @@ const Body = () => {
       }
 
 
+
+
       const isOnline = useOnline();
 
-      if(!isOnline)
-      <h1> 🔴 NO Internet Connection..... 
-        Please check your internet connection and try it later
-      </h1>;
+      // if(!isOnline)
+      // <h1> 🔴 NO Internet Connection..... 
+      //   Please check your internet connection and try it later
+      // </h1>;
 
       if(!allRestaurants) return null;
       return allRestaurants?.length===0 ? (
@@ -79,6 +81,7 @@ const Body = () => {
         {filteredRestaurants.map((restaurant) => {
          
           return (  
+
           <Link 
           className="basis-[250px] p-2.5 mb-2.5 mob:basis-[150px]"
           to={"/restaurant/" + restaurant?.info?.id }
