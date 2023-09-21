@@ -7,8 +7,48 @@ import rasmalai from "../assets/img/Screenshot (795).png";
 import gulabjamun from "../assets/img/Screenshot (792).png";
 import pavbhaji from "../assets/img/Screenshot (793).png";
 import burger from "../assets/img/Screenshot (791).png";
+import CarouselSlide from "../components/CarouselSlide";
 
 const About = () => {
+
+    const items = [
+        {
+            title: 'Biryani',
+            image:  biryani,
+            slideNumber: 1
+        },
+        {
+            title: 'Pav-Bhaji',
+            image:  pavbhaji,
+            slideNumber: 2
+        },
+        {
+            title: 'Burger',
+            image:  burger,
+            slideNumber: 3
+        },
+        {
+            title: 'Gulab-jamun',
+            image:  gulabjamun,
+            slideNumber: 4
+        },
+        {
+            title: 'Ras-Malai',
+            image:  rasmalai,
+            slideNumber: 5
+        },
+        {
+            title: 'Tea',
+            image:  tea,
+            slideNumber: 6
+        },
+        {
+            title: 'Coffee',
+            image:  coffee,
+            slideNumber: 7
+        },
+    ]
+
     return (
         <HomeLayout>
             <div className="pl-20 pt-20 flex flex-col text-white">
@@ -37,81 +77,12 @@ const About = () => {
                 </div>
 
 
-                <div className="carousel w-1/2 my-16 m-auto">                    
-                    <div id="slide1" className="carousel-item relative w-full">
-                        <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-                        <img src={biryani} className="w-50 rounded-full border-2 border-gray-950" />
-                           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                               <a href="#slide7" className="btn btn-circle">❮</a> 
-                               <a href="#slide2" className="btn btn-circle">❯</a>
-                          </div>
-                        </div> 
-                    </div>
+                <div className="carousel w-1/2 my-16 m-auto"> 
+                        {items && items.map(item => (<CarouselSlide {...item} key={item.slideNumber} totalSlides={items.length} />))}
+
+                {/* <CarouselSlide /> */}
 
 
-                    <div id="slide2" className="carousel-item relative w-full">
-                    <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-                    <img src={pavbhaji} className="w-50 rounded-full border-2 border-gray-950" />
-                       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                           <a href="#slide1" className="btn btn-circle">❮</a> 
-                           <a href="#slide3" className="btn btn-circle">❯</a>
-                       </div>
-                  </div>
-              </div> 
-
-
-
-             <div id="slide3" className="carousel-item relative w-full">
-             <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-            <img src={burger} className="w-50 rounded-full border-2 border-gray-950" />
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide2" className="btn btn-circle">❮</a> 
-                  <a href="#slide4" className="btn btn-circle">❯</a>
-              </div>
-         </div>
-    </div> 
-  <div id="slide4" className="carousel-item relative w-full">
-    <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-    <img src={gulabjamun} className="w-50 rounded-full border-2 border-gray-950" />
-       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-       <a href="#slide3" className="btn btn-circle">❮</a> 
-       <a href="#slide5" className="btn btn-circle">❯</a>
-       </div>
-    </div>
-   </div>
-
-
-  <div id="slide5" className="carousel-item relative w-full">
-    <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-    <img src={rasmalai} className="w-50 rounded-full border-2 border-gray-950" />
-       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-       <a href="#slide4" className="btn btn-circle">❮</a> 
-       <a href="#slide6" className="btn btn-circle">❯</a>
-       </div>
-    </div>
-   </div>
-
-
-  <div id="slide6" className="carousel-item relative w-full">
-    <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-    <img src={tea} className="w-50 rounded-full border-2 border-gray-950" />
-       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-       <a href="#slide5" className="btn btn-circle">❮</a> 
-       <a href="#slide7" className="btn btn-circle">❯</a>
-       </div>
-    </div>
-   </div>
-
-
-  <div id="slide7" className="carousel-item relative w-full">
-    <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-    <img src={coffee} className="w-50 rounded-full border-2 border-gray-950" />
-       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-       <a href="#slide6" className="btn btn-circle">❮</a> 
-       <a href="#slide1" className="btn btn-circle">❯</a>
-       </div>
-    </div>
-   </div>
 
 
  </div>
