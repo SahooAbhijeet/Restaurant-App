@@ -5,7 +5,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import Error from "./components/Error";
+import Error from "./Pages/Error";
 import Contact from "./Pages/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
@@ -87,6 +87,10 @@ const About = lazy(() => import("./Pages/About"));
                     <Instamart /> 
                 </Suspense>
                 ),
+            },
+            {
+                path: "/error",
+                element: <Error />
             },
             {
                 path: "/cart",

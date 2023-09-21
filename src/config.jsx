@@ -1,3 +1,12 @@
+import biryani from "./assets/img/Screenshot (794).png";
+import tea from "./assets/img/Screenshot (796).png";
+import coffee from "./assets/img/Screenshot (797).png";
+import rasmalai from "./assets/img/Screenshot (795).png";
+import gulabjamun from "./assets/img/Screenshot (792).png";
+import pavbhaji from "./assets/img/Screenshot (793).png";
+import burger from "./assets/img/Screenshot (791).png";
+
+
 export const IMG_CDN_URL = 
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
@@ -7445,4 +7454,43 @@ export const restaurantMenuList = [
   "deviceId": "4dfd2575-70a1-5f85-f782-52ee4ff9f768",
   "csrfToken": "UfV5eCAFNi7o--HMXS0sar3QMUfH33RXHe1Z719k"
 }
+]
+
+
+export const items = [
+  {
+      title: 'Biryani',
+      image:  biryani,
+      slideNumber: 1
+  },
+  {
+      title: 'Pav-Bhaji',
+      image:  pavbhaji,
+      slideNumber: 2
+  },
+  {
+      title: 'Burger',
+      image:  burger,
+      slideNumber: 3
+  },
+  {
+      title: 'Gulab-jamun',
+      image:  gulabjamun,
+      slideNumber: 4
+  },
+  {
+      title: 'Ras-Malai',
+      image:  rasmalai,
+      slideNumber: 5
+  },
+  {
+      title: 'Tea',
+      image:  tea,
+      slideNumber: 6
+  },
+  {
+      title: 'Coffee',
+      image:  coffee,
+      slideNumber: 7
+  },
 ]
