@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import HomeLayout from "./components/HomeLayout";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import SignUp from "./Pages/SignUp";
 import { Toaster } from "react-hot-toast";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Error from "./Pages/Error";
@@ -95,6 +96,10 @@ const About = lazy(() => import("./Pages/About"));
             {
                 path: "/cart",
                 element: <Cart />
+            },
+            {
+                path: "/signup",
+                element: <SignUp />
             },
         ],
     },
