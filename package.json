@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "buffer": "^6.0.3",
     "daisyui": "^3.7.6",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "parcel": "^2.9.3",
@@ -22,7 +23,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "axios": "^1.5.0",
+    "axios": "^1.6.2",
     "chart.js": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

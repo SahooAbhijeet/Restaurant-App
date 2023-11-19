@@ -4,6 +4,7 @@ import HomeLayout from "./components/HomeLayout";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import SignUp from "./Pages/SignUp";
+import LogIn from "./Pages/LogIn";
 import { Toaster } from "react-hot-toast";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Error from "./Pages/Error";
@@ -14,6 +15,7 @@ import Cart from "./components/Cart";
 import UserContext from "./utils/UserContext";
 import {Provider} from "react-redux";
 import store from "./Redux/store";
+
 
 
 const Instamart = lazy(() => import("./Pages/Instamart"));
@@ -101,6 +103,10 @@ const About = lazy(() => import("./Pages/About"));
                 path: "/signup",
                 element: <SignUp />
             },
+            {
+                path: "/login",
+                element: <LogIn />
+            }
         ],
     },
 ]);

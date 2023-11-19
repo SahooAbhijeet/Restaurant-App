@@ -1,13 +1,17 @@
 import HomeLayout from "../components/HomeLayout";
 import { useState } from "react";
 import { BsPersonCircle } from "react-icons/bs";
-import toast from "react-hot-toast";
-// import { useDispatch } from "react-redux";
+import { toast } from "react-hot-toast";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { createAccount } from "../Redux/Slices/authSlice";
 
 const SignUp = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const [previewImage, setPreviewImage] = useState("");
+
     const [signupData, setSignUpData] = useState({
         fullname: "",
         email: "",
@@ -16,22 +20,82 @@ const SignUp = () => {
     });
 
      function HandleUserInput(e) {
-        const [name, value] = e.target;
+        const {name, value} = e.target;
         setSignUpData({
             ...signupData,
             [name]: value
         })
     }
 
-    function createNewAccount(event) {
+    function getImage(event) {
         event.preventDefault();
-        if(!signupData.email || !signupData.password || !signupData.fullname || !signupData.avatar)
+            // getting the image
+            const uploadedImage = event.target.files[0];
+
+            if(uploadedImage) {
+                setSignUpData({
+                    ...signupData,
+                    avatar: uploadedImage
+                });
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(uploadedImage);
+                fileReader.addEventListener("load", function() {
+                    console.log(this.result);
+                    setPreviewImage(this.result);
+                    
+                })
+            }
+        }
+    
+        
+    async function createNewAccount(event) {
+        event.preventDefault();
+        if(!signupData.email || !signupData.password || !signupData.fullname || !signupData.avatar) {
         toast.error("Please fill all the details");
+        return;
+    }
+
+    //checking name field length
+    if(!signupData.fullname.length > 5) {
+        toast.error("Name should be atleast of 5 characters");
+        return;
+    }
+
+    //checking valid email
+    if(!signupData.email.match( /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)) {
+    toast.error("Invalid email id");
     return;
     }
 
+    //checking password validation
+    if(!signupData.password.match(/^(?=.*[0-9])(?=.*[!@#$%^&+])[a-zA-Z0-9!@#$%^&+]{6,16}$/)) {
+        toast.error("Password should be 6-16 characters long with atleast 8 number and special character");
+        return;
+    }
 
-    const [previewImage, setPreviewImage] = useState("");
+    const formData = new FormData();
+    formData.append("fullName", signupData.fullname);
+    formData.append("email", signupData.email);
+    formData.append("password", signupData.password);
+    formData.append("avatar", signupData.avatar);
+    
+    // dispatch create account action
+    const response =  dispatch(createAccount(formData));
+    console.log(response);
+
+    if(response?.payload?.success)
+    navigate("/");
+
+    setSignUpData({
+        fullname: "",
+        email: "",
+        password: "",
+        avatar: ""
+    });
+    setPreviewImage(" ");
+
+    }
+
     return (
         <HomeLayout>
             <div className="flex overflow-x-auto items-center justify-center h-[100vh]">
@@ -45,10 +109,12 @@ const SignUp = () => {
                         )}
                     </label>
                     <input
+                    onChange={getImage}
                     className="hidden"
                     type="file"
                     name="image_uploads"
-                    accept="png, jpg, jpeg, svg"
+                    id="image_uploads"
+                    accept=".png, .jpg, .jpeg, .svg"
                     />
 
                     <div className="flex flex-col gap-2">
@@ -102,7 +168,7 @@ const SignUp = () => {
             </div>
         </HomeLayout>
 
-    )
+    );
 }
 
 

@@ -1,4 +1,4 @@
-import axios from "axios;"
+import axios from "axios"
 
 const BASE_URL = "https://localhost:1234/api/v1";
 
